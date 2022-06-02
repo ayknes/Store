@@ -1,2 +1,8 @@
 <p>product works!</p>
-mat-tab
+<mat-card *ngFor="let product of products">
+    <mat-card-title>{{product.name}}</mat-card-title>
+    <mat-card-content>
+        <p>{{product.system}}</p>
+    </mat-card-content>
+</mat-card>
+
