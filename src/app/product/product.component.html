@@ -7,9 +7,12 @@
         <img src="https://m.media-amazon.com/images/I/71RVjhyGc8L._AC_SY450_.jpg" alt="image3">
         <img src="https://m.media-amazon.com/images/I/615gxSGp42L._AC_SY450_.jpg" alt="image4">
     </div>
-    <div class="up right">
+    <div class="up right" *ngIf="pro[0].marque!=undefined">
         <title>
-            <h1>{{pro[0].marque}}</h1>
+            <h1>  {{pro[0].marque}} {{pro[0].nom}} - {{pro[0].system.cpu.nom}}
+                ASUS ROG GL10DKR4600G035T - AMD R5-4600G - RAM 8Go -
+                Stockage SSD 512Go - NVIDIA GTX 1650 4Go -
+                Windows 10</h1>
         </title>
         <div>
             <ngx-star-rating></ngx-star-rating>
