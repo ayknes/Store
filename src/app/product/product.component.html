@@ -1,5 +1,4 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<p>product works!</p>
 <div class="up">
     <div class="images">
         <img src="https://m.media-amazon.com/images/I/71ayGFDyV4L._AC_SY450_.jpg" alt="image1">
@@ -8,17 +7,31 @@
         <img src="https://m.media-amazon.com/images/I/615gxSGp42L._AC_SY450_.jpg" alt="image4">
     </div>
     <div class="up right" *ngIf="pro[0].marque!=undefined">
-        <title>
-            <h1>  {{pro[0].marque}} {{pro[0].nom}} - {{pro[0].system.cpu.nom}}
-                ASUS ROG GL10DKR4600G035T - AMD R5-4600G - RAM 8Go -
-                Stockage SSD 512Go - NVIDIA GTX 1650 4Go -
-                Windows 10</h1>
-        </title>
+            <h1>  {{pro[0].marque}} {{pro[0].nom}} - {{pro[0].system.cpu.nom}} {{pro[0].system.cpu.marque}} - RAM {{pro[0].system.ram}} Go - Stockage SSD {{pro[0].system.hdd.capacite}} Go </h1>
         <div>
             <ngx-star-rating></ngx-star-rating>
             <p>(xxx)</p>
+            <p>
+                 {{pro[0].prix}} €
+            </p>
         </div>
-        <p>jhgrluigjhgvru</p>
+        <p>Processeur : 
+            AMD Ryzen 5 4600G
+
+            Taille installée : 8 Go / 64 Go (maximum)
+            
+            1 x 512 Go
+            
+            Processeur graphique : NVIDIA GeForce GTX 1650
+            
+            Interfaces : 1 x casque/microphone (1 à l'avant), 1 x microphone, 6 x USB 3.2 Gen 1 (2 à
+            l'avant, 4 à l'arrière), 2 x USB 3.2 Gen 2, 1 x LAN (Gigabit Ethernet), 2 x HDMI, 1 x
+            DisplayPort, 1 x sortie de ligne audio, 1 x entrée de ligne audio, 1 x clavier / souris PS/2, 1
+            x VGA, 1 x DVI-D, 1 x DVI
+            
+            Système d'exploitation fourni : Windows 10 Home
+            
+            Couleur : Gris</p>
     </div>
 </div>
 
