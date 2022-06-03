@@ -1,8 +1,28 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <p>product works!</p>
-<mat-card *ngFor="let product of products">
-    <mat-card-title>{{product.name}}</mat-card-title>
+<div class="up">
+    <div class="images">
+        <img src="https://m.media-amazon.com/images/I/71ayGFDyV4L._AC_SY450_.jpg" alt="image1">
+        <img src="https://m.media-amazon.com/images/I/71Pf1CXeyvL._AC_SY450_.jpg" alt="image2">
+        <img src="https://m.media-amazon.com/images/I/71RVjhyGc8L._AC_SY450_.jpg" alt="image3">
+        <img src="https://m.media-amazon.com/images/I/615gxSGp42L._AC_SY450_.jpg" alt="image4">
+    </div>
+    <div class="up right">
+        <title>
+            <h1>{{pro[0].marque}}</h1>
+        </title>
+        <div>
+            <ngx-star-rating></ngx-star-rating>
+            <p>(xxx)</p>
+        </div>
+        <p>jhgrluigjhgvru</p>
+    </div>
+</div>
+
+<!-- <mat-card *ngFor="let products of pro">
+    <mat-card-title>{{pro[2].system.cpu.marque}}</mat-card-title>
     <mat-card-content>
-        <p>{{product.system}}</p>
+        <p>{{pro}}</p>
     </mat-card-content>
-</mat-card>
+</mat-card> -->
 

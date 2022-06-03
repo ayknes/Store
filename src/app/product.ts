@@ -17,34 +17,29 @@ interface Graphique {
     modele: string;
     score: number;
 }
+interface System{
+    ram:number;
+    cpu:Cpu;
+    hdd:Disck;
+    cg:Graphique;
+}
 export class product{
     marque: string;
     nom:string;
-        "type": "fixe",
-        "ecran": 0,
-        "clavier": 0,
-        "system": {
-            "ram": 32,
-            "cpu": {
-                "marque":"INTELLE",
-                "nom": "X9 900",
-                "score": 25000,
-                "core": 2,
-                "frequence-max": 5900,
-                "tdp": 125
-            },
-            "hdd": {
-                "capacite": 3840,
-                "type": "nvme",
-                "rpm": 0,
-                "vitesse-transfert": 3000
-            },
-            "cg": {
-                "marque": "NVADIA",
-                "modele": "RTZ 3080",
-                "score": 20000
-            }
-        },
-        "batterie" : 0,
-        "prix": 1000
+    type:string;
+    ecran:string;
+    clavier:string;
+    system:System;
+    batterie:number;
+    prix:number;
+    constructor(marque:string,nom:string,type:string,ecran:string,clavier:string,system:System,batterie:number,prix:number){
+        this.marque=marque;
+        this.nom=nom;
+        this.type=type;
+        this.ecran=ecran;
+        this.clavier=clavier;
+        this.system=system;
+        this.batterie=batterie;
+        this.prix=prix;
+    }
 }
