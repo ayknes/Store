@@ -27,8 +27,8 @@ export class product{
     marque: string;
     nom:string;
     type:string;
-    ecran:string;
-    clavier:string;
+    ecran:any;
+    clavier:any;
     system:System;
     batterie:number;
     prix:number;

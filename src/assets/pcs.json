@@ -3,7 +3,7 @@
         "marque": "ASSER",
         "nom": "Respire TC10",
         "type": "fixe",
-        "ecran": 0,
+        "ecran": null,
         "clavier": 0,
         "system": {
             "ram": 32,

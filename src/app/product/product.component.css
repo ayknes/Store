@@ -1,0 +1,75 @@
+
+.previews{
+    max-width: 500px;
+}
+.profile{
+    background-image: url('https://media.istockphoto.com/photos/closeup-of-lion-panthera-leo-8-years-old-in-front-of-white-background-picture-id944272094?k=20&m=944272094&s=612x612&w=0&h=X9kSUtTha4wKrtZRKaArKS0cPON-IvxMGGb9LpKl8vk=');
+    background-size: cover;
+}
+
+.up{
+
+    display: flex;
+    width: 100%;
+}
+.images{
+    width: 100%;
+    
+    display: flex;
+
+}
+.secondaire{
+    
+    display: flex;
+    flex-direction: column;
+}
+.image{
+    border: 4px solid yellow;
+    width: 110px;
+    height: 33.3%;
+}
+.image:hover{
+    cursor: pointer;
+}
+.imagep{
+    border: 4px solid yellow;
+    width: 600px;
+}
+.upright{
+
+    display: flex;
+    flex-direction: column;
+}
+.upright > .rating{
+
+    display: flex;
+    flex-direction: column;
+}
+.rat{
+
+    display: flex;
+}
+
+.comp{
+
+    height:500px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.dropowncpu div{
+    background-color:#fff;
+    box-shadow:0 4px 8px rgba(0,0,0,0.2);
+    z-index:1;
+    visibility:hidden;
+    position:absolute;
+    min-width:100%;
+    opacity:0;
+    transition:.3s;
+}
+.dropowncpu:hover div{
+    visibility:visible;
+    opacity:1;
+}
+

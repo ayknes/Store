@@ -1,44 +1,88 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div class="up">
     <div class="images">
-        <img src="https://m.media-amazon.com/images/I/71ayGFDyV4L._AC_SY450_.jpg" alt="image1">
-        <img src="https://m.media-amazon.com/images/I/71Pf1CXeyvL._AC_SY450_.jpg" alt="image2">
-        <img src="https://m.media-amazon.com/images/I/71RVjhyGc8L._AC_SY450_.jpg" alt="image3">
-        <img src="https://m.media-amazon.com/images/I/615gxSGp42L._AC_SY450_.jpg" alt="image4">
-    </div>
-    <div class="up right" *ngIf="pro[0].marque!=undefined">
-            <h1>  {{pro[0].marque}} {{pro[0].nom}} - {{pro[0].system.cpu.nom}} {{pro[0].system.cpu.marque}} - RAM {{pro[0].system.ram}} Go - Stockage SSD {{pro[0].system.hdd.capacite}} Go </h1>
-        <div>
-            <ngx-star-rating></ngx-star-rating>
-            <p>(xxx)</p>
-            <p>
-                 {{pro[0].prix}} €
-            </p>
+        <div class="secondaire">
+        <img class="image" src="https://m.media-amazon.com/images/I/71Pf1CXeyvL._AC_SY450_.jpg" alt="image2">
+        <img class="image" src="https://m.media-amazon.com/images/I/71RVjhyGc8L._AC_SY450_.jpg" alt="image3">
+        <img class="image" src="https://m.media-amazon.com/images/I/615gxSGp42L._AC_SY450_.jpg" alt="image4">
         </div>
-        <p>Processeur : 
-            AMD Ryzen 5 4600G
+        <div class="principal">
+            <img class="imagep" src="https://m.media-amazon.com/images/I/71ayGFDyV4L._AC_SY450_.jpg" alt="image1">
+        </div>
+        
+        
+    </div>
+    <div class="upright" *ngIf="pro[0].clavier!=undefined">
+            <h1>  {{pro[0].marque}} {{pro[0].nom}} - {{pro[0].system.cpu.nom}} {{pro[0].system.cpu.marque}} - RAM {{pro[0].system.ram}} Go - Stockage SSD {{pro[0].system.hdd.capacite}} Go </h1>
+        <div class="rating">
+            <div class="rat">
+                <p>(xx/5)  </p>
+                <!-- <star-rating size="small"></star-rating> -->
+            </div><p>
+                {{pro[0].prix}} €
+            </p>
+            
+            
+        </div>
+        <p>Processeur : {{pro[0].system.cpu.nom}} {{pro[0].system.cpu.marque}} <br>
 
-            Taille installée : 8 Go / 64 Go (maximum)
+            Taille installée : {{pro[0].system.ram}} Go <br>
+            Stockage : hdd {{pro[0].system.hdd.capacite}} Go <br>
             
-            1 x 512 Go
-            
-            Processeur graphique : NVIDIA GeForce GTX 1650
+            Processeur graphique : {{pro[0].system.cg.marque}} {{pro[0].system.cg.modele}} <br>
             
             Interfaces : 1 x casque/microphone (1 à l'avant), 1 x microphone, 6 x USB 3.2 Gen 1 (2 à
             l'avant, 4 à l'arrière), 2 x USB 3.2 Gen 2, 1 x LAN (Gigabit Ethernet), 2 x HDMI, 1 x
             DisplayPort, 1 x sortie de ligne audio, 1 x entrée de ligne audio, 1 x clavier / souris PS/2, 1
-            x VGA, 1 x DVI-D, 1 x DVI
+            x VGA, 1 x DVI-D, 1 x DVI <br>
             
-            Système d'exploitation fourni : Windows 10 Home
+            Système d'exploitation fourni : Windows 10 Home <br>
             
             Couleur : Gris</p>
     </div>
 </div>
+<div class="comp">
+    <div class="dropowncpu">
+        <button class="link">
+        CPU : {{pro[0].system.cpu.nom}} {{pro[0].system.cpu.marque}}
+        </button>
+        <div class="cpu-card">
+            puissance : 6 coeur <br>
+            Rapidite : 4.2GHZ <br>
+            Prix/qualite : 88.25 <br>
+        </div>
+    </div>
+    
+    <button>
+        GPU : {{pro[0].system.cg.marque}} {{pro[0].system.cg.modele}}
+    </button>
+    <button>
+        RAM : {{pro[0].system.ram}} Go
+    </button>
+</div>
+<div class="reviews">
+    <mat-card>
+        <mat-card-header>
+            <div mat-card-avatar class="profile"></div>
+            <mat-card-title>
+                xxxxx -xxxx
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+        </mat-card-content>
+        <mat-card-actions> 
+            <ngx-star-rating></ngx-star-rating>
+        </mat-card-actions>
+    </mat-card>
+</div>
 
-<!-- <mat-card *ngFor="let products of pro">
+ <!-- <mat-card *ngFor="let products of pro">
     <mat-card-title>{{pro[2].system.cpu.marque}}</mat-card-title>
     <mat-card-content>
         <p>{{pro}}</p>
     </mat-card-content>
-</mat-card> -->
+</mat-card>  -->
 
