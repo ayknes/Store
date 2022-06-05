@@ -3,7 +3,7 @@ interface Cpu{
     nom: string;
     score: number;
     core: number;
-    frequence_max:number;
+    frequence_max: number;
     tdp:number;
 }
 interface Disck{

@@ -12,7 +12,7 @@
         
         
     </div>
-    <div class="upright" *ngIf="pro[0].clavier!=undefined">
+    <div class="upright" *ngIf="pro[0].nom!=undefined">
             <h1>  {{pro[0].marque}} {{pro[0].nom}} - {{pro[0].system.cpu.nom}} {{pro[0].system.cpu.marque}} - RAM {{pro[0].system.ram}} Go - Stockage SSD {{pro[0].system.hdd.capacite}} Go </h1>
         <div class="rating">
             <div class="rat">
@@ -41,27 +41,52 @@
             Couleur : Gris</p>
     </div>
 </div>
-<div class="comp">
-    <div class="dropowncpu">
-        <button class="link">
-        CPU : {{pro[0].system.cpu.nom}} {{pro[0].system.cpu.marque}}
-        </button>
-        <div class="cpu-card">
-            puissance : 6 coeur <br>
-            Rapidite : 4.2GHZ <br>
-            Prix/qualite : 88.25 <br>
+<div class="bottom">
+    <div class="comp">
+    <h3>
+        Les Composant:
+    </h3>
+        <div class="dropown">
+            <button class="link">
+            CPU : 
+            </button>
+            <div class="cpu-card">
+                Nom:{{pro[0].system.cpu.nom}} <br>
+                Marque: {{pro[0].system.cpu.marque}} <br>
+                Core : {{pro[0].system.cpu.core}} <br>
+                Frequence max : {{pro[0].system.cpu.frequence_max}} <br>
+                Tdp : {{pro[0].system.cpu.tdp}}
+            </div>
         </div>
+        <div class="dropown">
+            <button class="link">
+                GPU : 
+            </button>
+            <div class="gpu-card">
+                Marque: {{pro[0].system.cg.marque}} <br>
+                Model: {{pro[0].system.cg.modele}} <br>
+                Score: {{pro[0].system.cg.score}} 
+            </div>
+        </div>
+        <div class="dropown">
+            <button class="link">
+                RAM : 
+            </button>
+            <div class="gpu-card">
+                {{pro[0].system.ram}} Go
+            </div>
+        </div>
+        <div class="dropown">
+            <button class="link">
+                HDD : 
+            </button>
+            <div class="gpu-card">
+                Stockage: {{pro[0].system.hdd.capacite}} Go
+            </div>
+        </div>
+
     </div>
-    
-    <button>
-        GPU : {{pro[0].system.cg.marque}} {{pro[0].system.cg.modele}}
-    </button>
-    <button>
-        RAM : {{pro[0].system.ram}} Go
-    </button>
-</div>
-<div class="reviews">
-    <mat-card>
+    <mat-card class="reviews">
         <mat-card-header>
             <div mat-card-avatar class="profile"></div>
             <mat-card-title>
@@ -77,12 +102,23 @@
             <ngx-star-rating></ngx-star-rating>
         </mat-card-actions>
     </mat-card>
+    <mat-card class="reviews">
+        <mat-card-header>
+            <div mat-card-avatar class="profile"></div>
+            <mat-card-title>
+                xxxxx -xxxx
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+        </mat-card-content>
+        <mat-card-actions> 
+            <ngx-star-rating class="2"></ngx-star-rating>
+        </mat-card-actions>
+    </mat-card>
 </div>
 
- <!-- <mat-card *ngFor="let products of pro">
-    <mat-card-title>{{pro[2].system.cpu.marque}}</mat-card-title>
-    <mat-card-content>
-        <p>{{pro}}</p>
-    </mat-card-content>
-</mat-card>  -->
+
 
