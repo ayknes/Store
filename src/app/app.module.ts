@@ -15,17 +15,23 @@ import { MatIconModule } from '@angular/material/icon';
 import { NgxStarRatingModule } from 'ngx-star-rating';
 import { StarRatingModule } from 'angular-star-rating';
 
+
+
+import { MatToolbarModule } from '@angular/material/toolbar'; 
+
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { ProductComponent } from './product/product.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginPageComponent,
-    ProductComponent
+    ProductComponent,
+    NavBarComponent
   ],
   imports: [
     RouterModule,
@@ -41,7 +47,9 @@ import { HttpClientModule } from '@angular/common/http';
     MatIconModule,
     HttpClientModule,
     NgxStarRatingModule,
-    StarRatingModule.forRoot()
+    StarRatingModule.forRoot(),
+    MatToolbarModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

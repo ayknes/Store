@@ -7,6 +7,7 @@ import { ProductComponent } from './product/product.component';
 const routes: Routes = [
   { path: '' , component: ProductComponent },
   { path: 'login', component: LoginPageComponent }
+  
 ];
 
 @NgModule({
