@@ -1,0 +1,45 @@
+<div class="laptop-tabs">
+  <mat-tab-group mat-align-tabs="start" backgroundColor="primary">
+    <mat-tab label="About">
+      <p *ngIf="laptop.parent_platforms?.length" class="laptop-tabs-par">
+        Platforms:
+        <span *ngFor="let laptop of laptop.parent_platforms; let last = last"
+          >{{ laptop.platform.name }}<span *ngIf="!last">, </span></span
+        >
+      </p>
+      <p *ngIf="laptop.publishers?.length" class="laptop-tabs-par">
+        Publishers:
+        <span *ngFor="let publisher of laptop.publishers; let last = last"
+          >{{ publisher.name }}<span *ngIf="!last">, </span></span
+        >
+      </p>
+      <p *ngIf="laptop.website" class="laptop-tabs-par">
+        Website:
+        <a class="laptop-tabs-link" href="{{ laptop.website }}" target="_blank">{{
+          laptop.website
+        }}</a>
+      </p>
+      <div class="laptop-description" [innerHTML]="laptop.description"></div>
+      <p class="laptop-tabs-votes">
+        <ng-container *ngFor="let rating of laptop.ratings">
+          <span *ngIf="rating.title === 'exceptional'">
+            <mat-icon class="laptop-votes-up">thumb_up</mat-icon>
+            <span class="laptop-votes-count">{{ rating.count || 0 }}</span>
+          </span>
+          <span *ngIf="rating.title === 'skip'">
+            <mat-icon class="laptop-votes-down">thumb_down</mat-icon>
+            <span class="laptop-votes-count">{{ rating.count || 0 }}</span>
+          </span>
+        </ng-container>
+      </p>
+    </mat-tab>
+    <mat-tab label="Screenshots" *ngIf="laptop.screenshots?.length">
+      <img
+        class="laptop-screenshot"
+        *ngFor="let screenshot of laptop.screenshots"
+        src="{{ screenshot.image }}"
+        alt="screenshot"
+      />
+    </mat-tab>
+  </mat-tab-group>
+</div>

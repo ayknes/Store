@@ -1,0 +1,45 @@
+<div class="filters">
+    <mat-form-field>
+      <mat-label>Filter</mat-label>
+      <mat-select
+        panelClass="sort-select"
+        [(ngModel)]="sort"
+        (selectionChange)="searchLaptops(sort)"
+      >
+        <mat-option value="name">Name</mat-option>
+        <mat-option value="-released">Released</mat-option>
+        <mat-option value="-added">Added</mat-option>
+        <mat-option value="-updated">Updated</mat-option>
+        <mat-option value="-rating">Rating</mat-option>
+        
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div class="laptops">  
+    <ng-container *ngFor="let laptop of laptops">
+      <div class="laptop" (click)="openGameDetails(game.id)">
+        <div class="laptop-thumb-container">
+          <img
+           *ngIf="laptop.background_image"
+            src="{{ game.background_image }}"
+            alt="thumbnail"
+            class="laptop-thumbnail"
+          />
+        <p *ngIf="!laptop.background_image">No image</p>
+        </div>
+        <div class="laptop-description">
+          <p class="laptop-name">{{ laptop.name }}</p>
+          <div class="laptop-platforms">
+            <img
+             *ngFor="let laptopPlatform of laptop.parent_platforms"            
+              class="laptop-platform"
+              src="assets/images/platforms/{{ laptopPlatform.platform.slug }}.svg"
+              alt="{{ laptopPlatform.platform.slug }}"
+            />
+          </div>
+        </div>
+      </div>
+    </ng-container> 
+  </div>
+  

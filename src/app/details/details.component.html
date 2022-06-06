@@ -1,0 +1,45 @@
+<div class="details">
+    <div class="laptop-banner">
+      <img
+        class="laptop-banner-img"
+        src="{{ laptop.background_image }}"
+        alt="background image"
+      />
+    </div>
+    <div class="laptop-content">
+      <div class="details-wrapper">
+        <div class="laptop-header">
+          <h1 class="laptop-header-title">{{ laptop.name }}</h1>
+          <h2 class="laptop-header-release-date">
+            Release: {{ laptop.released | date }}
+          </h2>
+          <p class="laptop-header-genres">
+            <span *ngFor="let genre of laptop.genres; let last = last"
+            >{{ genre.name }}<span *ngIf="!last">, </span></span
+          >
+          </p>
+          <div class="laptop-gauge">
+            <mwl-gauge
+              class="two"
+              [max]="100"
+              [dialStartAngle]="180"
+              [dialEndAngle]="0"
+              [value]="laptopRating"
+              [animated]="true"
+              [color]="getColor"
+              [animationDuration]="2"
+            >
+            </mwl-gauge>
+            <a
+              class="laptop-gauge-label"
+              target="_blank"
+              href="{{ laptop.metacritic_url }}"
+              >Metacritic</a
+            >
+          </div>
+        </div>
+        <app-laptop-tabs [laptop]="laptop"></app-laptop-tabs>
+      </div>
+    </div>
+  </div>
+  
