@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { FormsModule } from '@angular/forms';
-
+import { RouterModule } from '@angular/router';
 
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatCardModule } from '@angular/material/card';
@@ -13,18 +13,20 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatIconModule } from '@angular/material/icon';
 import { NgxStarRatingModule } from 'ngx-star-rating';
 
-
+import { MatToolbarModule } from '@angular/material/toolbar'; 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { ProductComponent } from './product/product.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginPageComponent,
-    ProductComponent
+    ProductComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +40,9 @@ import { HttpClientModule } from '@angular/common/http';
     MatCheckboxModule,
     MatIconModule,
     HttpClientModule,
-    NgxStarRatingModule
+    NgxStarRatingModule,
+    MatToolbarModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
