@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="container">
 <div class="up">
     <div class="images">
         <div class="secondaire">
@@ -39,7 +40,7 @@
     </div>
 </div>
 <div class="bottom">
-    <div class="comp">
+    <div class="comp" class="upright" *ngIf="pro[0].nom!=undefined">
     <h3>
         Les Composant:
     </h3>
@@ -115,6 +116,7 @@
             <ngx-star-rating class="2"></ngx-star-rating>
         </mat-card-actions>
     </mat-card>
+</div>
 </div>
 
 

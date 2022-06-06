@@ -23,7 +23,7 @@ interface System{
     hdd:Disck;
     cg:Graphique;
 }
-export class product{
+export class Product{
     marque: string;
     nom:string;
     type:string;

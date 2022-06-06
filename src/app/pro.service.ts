@@ -1,7 +1,7 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, Subject, throwError } from 'rxjs';
-import { product } from './product';
+import { Product } from './product';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +10,7 @@ export class ProService {
 
   constructor(private http : HttpClient) { }
   url : string = "http://localhost:4200/assets/pcs.json";
-  
+  public pro: Product[] = [];
   
   getProducts(){
     // let sub = new Subject<product>();
@@ -24,7 +24,7 @@ export class ProService {
     //   }
     //  )
     //  return sub
-    return this.http.get<product[]>(this.url);
+    return this.http.get<Product[]>(this.url);
   }
 
 }
