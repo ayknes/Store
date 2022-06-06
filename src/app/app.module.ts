@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-
 import { FormsModule } from '@angular/forms';
 
 
@@ -26,12 +25,13 @@ import { ProductComponent } from './product/product.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginPageComponent,
     ProductComponent,
-    NavBarComponent
+    NavBarComponent,
   ],
   imports: [
     RouterModule,
