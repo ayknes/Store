@@ -41,6 +41,10 @@
     display: flex;
     flex-direction: column;
 }
+.upright > p{
+    font-weight: bold;
+    box-shadow: 4px 4px 4px 3px #888888;
+}
 .upright > .rating{
 
     display: flex;
@@ -56,7 +60,6 @@
     height:300px;
     display: flex;
     flex-direction: column;
-    background-color:aqua;
 
 }
 .dropown{
@@ -85,5 +88,12 @@
 .bottom{
     display: flex;
     flex-direction: row;
+}
+.rating > p{
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    width: 70px;
+    height: 20px;
+    display: center;
 }
 

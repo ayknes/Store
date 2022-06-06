@@ -15,10 +15,7 @@
     <div class="upright" *ngIf="pro[0].nom!=undefined">
             <h1>  {{pro[0].marque}} {{pro[0].nom}} - {{pro[0].system.cpu.nom}} {{pro[0].system.cpu.marque}} - RAM {{pro[0].system.ram}} Go - Stockage SSD {{pro[0].system.hdd.capacite}} Go </h1>
         <div class="rating">
-            <div class="rat">
-                <p>(xx/5)  </p>
-                <!-- <star-rating size="small"></star-rating> -->
-            </div><p>
+            <p>
                 {{pro[0].prix}} €
             </p>
             
